@@ -1,3 +1,8 @@
+.htaccess
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^(www\.)?mutzurzukunft\.de$ [NC]
 RewriteRule ^(.*)$ https://mutzurzukunft.com/$1 [R=301,L]
