@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mut zur Zukunft – Hier entsteht etwas</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root{
+      --bg:#0b0b0c;        /* Hintergrund */
+      --fg:#ffffff;        /* Textfarbe  */
+      --muted:#b7b7b7;     /* Sekundär   */
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Arial,sans-serif;
+      display:grid; place-items:center;
+    }
+    main{max-width:780px; padding:24px; text-align:center}
+    img.cover{
+      width:min(520px, 90vw); height:auto; border-radius:18px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.45); margin:0 auto 24px;
+      display:block;
+    }
+    h1{font-size:clamp(28px,5vw,56px); margin:.2rem 0 .6rem}
+    p{margin:.5rem 0; line-height:1.5}
+    .muted{color:var(--muted)}
+    a{color:inherit; text-underline-offset:3px}
+    footer{margin-top:28px; font-size:.9rem}
+  </style>
+</head>
+<body>
+  <main>
+    <img class="cover" src="assets/cover.jpg" alt="Buchcover: Mut zur Zukunft" />
+    <h1>Hier entsteht etwas.</h1>
+    <p>Das Buch <strong>Mut zur Zukunft</strong> erscheint bald.</p>
+    <!-- Optional: <p>Kontakt: <a href="mailto:mail@deinedomain.de">mail@deinedomain.de</a></p> -->
+    <footer class="muted">© <span id="y"></span> Mut zur Zukunft</footer>
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
